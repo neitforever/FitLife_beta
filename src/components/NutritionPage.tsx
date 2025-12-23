@@ -6,7 +6,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { Input } from './ui/input';
 import { Label } from './ui/label';
 import { Select } from './ui/select';
-import { Progress } from './ui/progress';
 import { ChevronRight, Clock, Flame } from 'lucide-react';
 
 interface NutritionPageProps {

@@ -340,17 +340,17 @@ export function ProfilePage({ onNavigate }: ProfilePageProps) {
                       <div className="text-center p-3 bg-blue-50 rounded-xl">
                         <div className="text-sm text-gray-600 mb-1">Белки</div>
                         <div className="text-lg font-bold text-blue-700 mb-1">105/120</div>
-                        <Progress value={88} className="h-1.5 bg-blue-200" indicatorClassName="bg-blue-600" />
+                        <Progress value={88} className="h-1.5" />
                       </div>
                       <div className="text-center p-3 bg-yellow-50 rounded-xl">
                         <div className="text-sm text-gray-600 mb-1">Жиры</div>
                         <div className="text-lg font-bold text-yellow-700 mb-1">48/60</div>
-                        <Progress value={80} className="h-1.5 bg-yellow-200" indicatorClassName="bg-yellow-600" />
+                        <Progress value={80} className="h-1.5" />
                       </div>
                       <div className="text-center p-3 bg-green-50 rounded-xl">
                         <div className="text-sm text-gray-600 mb-1">Углеводы</div>
                         <div className="text-lg font-bold text-green-700 mb-1">152/180</div>
-                        <Progress value={84} className="h-1.5 bg-green-200" indicatorClassName="bg-green-600" />
+                        <Progress value={84} className="h-1.5" />
                       </div>
                     </div>
 
