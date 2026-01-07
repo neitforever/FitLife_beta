@@ -13,9 +13,17 @@ export function AApp() {
 
   // Sync with URL path (без префикса /a)
   useEffect(() => {
-    const path = window.location.pathname;
-    const page = path.replace('/', '') || 'home';
-    setCurrentPage(page);
+    const updatePageFromPath = () => {
+      const path = window.location.pathname;
+      const page = path === '/' ? 'home' : path.slice(1); // Remove leading '/'
+      setCurrentPage(page);
+    };
+    
+    updatePageFromPath();
+    
+    // Handle browser back/forward
+    window.addEventListener('popstate', updatePageFromPath);
+    return () => window.removeEventListener('popstate', updatePageFromPath);
   }, []);
 
   // Update URL when page changes (без префикса /a)
