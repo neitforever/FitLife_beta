@@ -1,70 +1,63 @@
-# FitLife Beta - Базовый прототип
+# FitLife Beta - Basic Prototype
 
-Базовый прототип фитнес-приложения FitLife с минималистичным дизайном.
+Basic prototype of the FitLife fitness application with a minimalist design.
 
-## Описание
+## Description
 
-FitLife Beta — это упрощенная версия фитнес-платформы с аккуратным, минималистичным дизайном. Прототип демонстрирует основную функциональность приложения без сложных визуальных эффектов.
+FitLife Beta is a simplified version of the fitness platform with a clean, minimalist design. The prototype demonstrates the core functionality of the application without complex visual effects.
 
-## Особенности
+## Features
 
-- **Минималистичный дизайн**: Grayscale палитра с синим акцентом
-- **Типографика Inter**: Чистый и современный шрифт
-- **Адаптивность**: Полностью адаптивный дизайн для всех устройств
-- **5 основных страниц**:
-  - Главная (`/`)
-  - Тренировки (`/workouts`)
-  - Питание (`/nutrition`)
-  - Сообщество (`/community`)
-  - Профиль (`/profile`)
+- **Minimalist Design**: Grayscale palette with blue accent
+- **Inter Typography**: Clean and modern font
+- **Responsive**: Fully responsive design for all devices
+- **5 Main Pages**:
+  - Home (`/` or `/home`)
+  - Workouts (`/workouts`)
+  - Nutrition (`/nutrition`)
+  - Community (`/community`)
+  - Profile (`/profile`)
 
-## Технологии
+## Technologies
 
 - **React** 18.2.0
 - **TypeScript** 5.2.2
 - **Vite** 5.0.8
 - **Tailwind CSS** 3.4.0
-- **Lucide React** (иконки)
+- **Lucide React** (icons)
 
-## Установка
+## Installation
 
-1. Клонируйте репозиторий:
+1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/FitLife_beta.git
+git clone https://github.com/neitforever/FitLife_beta.git
 cd FitLife_beta
 ```
 
-2. Установите зависимости:
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-3. Запустите dev сервер:
+3. Start the dev server:
 ```bash
 npm run dev
 ```
 
-4. Откройте браузер по адресу `http://localhost:3000`
+4. Open your browser at `http://localhost:3000`
 
-**Примечание**: В beta репозитории приложение работает без префикса `/a`. Все маршруты доступны напрямую:
-- `/` - главная
-- `/workouts` - тренировки
-- `/nutrition` - питание
-- `/community` - сообщество
-- `/profile` - профиль
+## Available Scripts
 
-## Доступные команды
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
 
-- `npm run dev` - Запуск dev сервера
-- `npm run build` - Сборка для production
-- `npm run preview` - Просмотр production build
-
-## Структура проекта
+## Project Structure
 
 ```
 src/
 ├── components/
-│   └── a/              # Компоненты базового прототипа
+│   └── a/              # Basic prototype components
 │       ├── AButton.tsx
 │       ├── ACard.tsx
 │       ├── AInput.tsx
@@ -76,74 +69,54 @@ src/
 │       ├── ANutritionPage.tsx
 │       ├── ACommunityPage.tsx
 │       └── AProfilePage.tsx
-├── App.tsx             # Главный компонент с роутингом
+├── App.tsx             # Main component with routing
 └── main.tsx            # Entry point
 ```
 
-## Дизайн-система
+## Design System
 
-### Цвета
-- **Фон**: Белый (`bg-white`)
-- **Акцент**: Синий (`blue-600`)
-- **Границы**: Серый (`border-gray-200`)
-- **Текст**: Серый (`text-gray-700`, `text-gray-900`)
+### Colors
+- **Background**: White (`bg-white`)
+- **Accent**: Blue (`blue-600`)
+- **Borders**: Gray (`border-gray-200`)
+- **Text**: Gray (`text-gray-700`, `text-gray-900`)
 
-### Типографика
-- **Шрифт**: Inter (Google Fonts)
-- **Заголовки**: `text-3xl sm:text-4xl font-bold`
-- **Текст**: `text-base` или `text-sm`
+### Typography
+- **Font**: Inter (Google Fonts)
+- **Headings**: `text-3xl sm:text-4xl font-bold`
+- **Body**: `text-base` or `text-sm`
 
-### Компоненты
-- **Кнопки**: Высота 44-48px, радиус 10px
-- **Карточки**: Радиус 12px, простая рамка
-- **Поля ввода**: Высота 44px, радиус 10px
+### Components
+- **Buttons**: Height 44-48px, radius 10px
+- **Cards**: Radius 12px, simple border
+- **Inputs**: Height 44px, radius 10px
 
-## Функциональность
+## Functionality
 
-### Главная страница
-- Hero секция с призывом к действию
-- Статистика платформы
-- Основные возможности (тренировки, питание)
-- Популярные программы
+### Home Page
+- Hero section with call-to-action
+- Platform statistics
+- Main features (workouts, nutrition)
+- Popular programs
 
-### Тренировки
-- Список программ тренировок
-- Фильтрация по целям, уровню, месту
-- Модальное окно с деталями программы
+### Workouts
+- List of workout programs
+- Filtering by goals, level, location
+- Modal window with program details
 
-### Питание
-- Планы питания для разных целей
-- Трекер воды
-- Калькулятор калорий
+### Nutrition
+- Meal plans for different goals
+- Water tracker
+- Calorie calculator
 
-### Сообщество
-- Лента постов
-- Активные челленджи
-- Рейтинги пользователей
+### Community
+- Posts feed
+- Active challenges
+- User leaderboards
 
-### Профиль
-- Панель управления
-- Статистика тренировок
-- Прогресс и измерения
-- Достижения
-- Настройки
-
-## Деплой
-
-Проект готов к деплою на Vercel, Netlify или любой другой платформе.
-
-### Vercel
-
-1. Подключите репозиторий к Vercel
-2. Убедитесь, что Build Command: `npm run build`
-3. Publish Directory: `dist`
-4. Деплой автоматически настроит SPA роутинг
-
-## Лицензия
-
-MIT
-
-## Автор
-
-FitLife Team
-
+### Profile
+- Dashboard
+- Workout statistics
+- Progress and measurements
+- Achievements
+- Settings
