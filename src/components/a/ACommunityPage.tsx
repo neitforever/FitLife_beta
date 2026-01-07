@@ -1,6 +1,6 @@
 import { ACard, ACardContent } from './ACard';
 import { AButton } from './AButton';
-import { Users, Trophy, MessageSquare } from 'lucide-react';
+import { Trophy, MessageSquare } from 'lucide-react';
 
 interface ACommunityPageProps {
   onNavigate: (page: string) => void;
