@@ -7,14 +7,18 @@ import { ANutritionPage } from './ANutritionPage';
 import { ACommunityPage } from './ACommunityPage';
 import { AProfilePage } from './AProfilePage';
 
-// Версия AApp для beta репозитория (без префикса /a)
+// Базовый прототип FitLife - всегда работает по корневому пути /
 export function AApp() {
   const [currentPage, setCurrentPage] = useState('home');
 
-  // Sync with URL path (без префикса /a)
+  // Sync with URL path - игнорируем префикс /a если есть
   useEffect(() => {
     const updatePageFromPath = () => {
-      const path = window.location.pathname;
+      let path = window.location.pathname;
+      // Убираем префикс /a если он есть
+      if (path.startsWith('/a')) {
+        path = path.replace('/a', '') || '/';
+      }
       const page = path === '/' ? 'home' : path.slice(1); // Remove leading '/'
       setCurrentPage(page);
     };
@@ -26,7 +30,7 @@ export function AApp() {
     return () => window.removeEventListener('popstate', updatePageFromPath);
   }, []);
 
-  // Update URL when page changes (без префикса /a)
+  // Update URL when page changes - всегда используем корневой путь без /a
   const handleNavigate = (page: string) => {
     setCurrentPage(page);
     const url = page === 'home' ? '/' : `/${page}`;
